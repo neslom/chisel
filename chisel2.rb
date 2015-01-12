@@ -1,12 +1,14 @@
 require './header'
 require './paragraph'
+require './emphasis'
 
 class Chisel
-  attr_reader :document, :header, :paragraph
+  attr_reader :document, :header, :paragraph, :emphasis
   def initialize(document)
     @document = document
     @header = Header.new
     @paragraph = Paragraph.new
+    @emphasis = Emphasis.new
   end
 
   def split_doc_into_lines
@@ -32,7 +34,7 @@ class Chisel
   end
 
   def parse
-    line_checker.join("\n\n")
+    emphasis.replace_words(line_checker.join("\n\n"))
   end
 end
 
