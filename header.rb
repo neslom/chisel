@@ -1,30 +1,24 @@
-require 'pry'
 class Header
-  attr_reader :text
-  def initialize(text)
-    @text = text
-  end
-
-  def count_hashtags
+  def count_hashtags(text)
     text.count("#")
   end 
 
-  def delete_whitespace_after_hashes
-    text[count_hashtags] = ""
+  def delete_whitespace_after_hashes(text)
+    text[count_hashtags(text)] = ""
     text
   end
 
-  def hashtag_regenerator
-    "#" * count_hashtags
+  def hashtag_regenerator(text)
+    "#" * count_hashtags(text)
   end
 
-  def text_splitter
+  def text_splitter(text)
      text.split.join(" ")
   end
 
-  def replace_header_tag
-    delete_whitespace_after_hashes 
-    text_splitter.gsub("#{hashtag_regenerator}", "<h#{count_hashtags}>") + "</h#{count_hashtags}>"
+  def replace_header_tag(text)
+    delete_whitespace_after_hashes(text)
+    text_splitter(text).gsub("#{hashtag_regenerator(text)}", "<h#{count_hashtags(text)}>") + "</h#{count_hashtags(text)}>"
   end
 
 end
