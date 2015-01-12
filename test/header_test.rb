@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'header'
+require './lib/header'
 
 class HeaderTest < MiniTest::Test
   attr_reader :header

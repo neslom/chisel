@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'paragraph'
+require './lib/paragraph'
 
 class ParagraphTest < MiniTest::Test
   attr_reader :para

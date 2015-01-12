@@ -1,6 +1,6 @@
-require './header'
-require './paragraph'
-require './emphasis'
+require './lib/header'
+require './lib/paragraph'
+require './lib/emphasis'
 
 class Chisel
   attr_reader :document, :header, :paragraph, :emphasis

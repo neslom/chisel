@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './chisel2'
+require './lib/chisel2'
 
 class ChiselTest < MiniTest::Test
   attr_reader :parser

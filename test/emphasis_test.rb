@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './emphasis'
+require './lib/emphasis'
 
 class EmphasisTest < MiniTest::Test
   attr_reader :text, :asterisk
